@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--<layout xmlns:tools="http://schemas.android.com/tools"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--&lt;!&ndash;    <data>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <import type="android.view.View" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <variable&ndash;&gt;-->
+<!--&lt;!&ndash;            name="viewmodel"&ndash;&gt;-->
+<!--&lt;!&ndash;            type="com.kiamermedia.houseup.ui.property1.Property1ViewModel" />&ndash;&gt;-->
+
+<!--    </data>-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <include
+            android:id="@+id/customToolbar"
+            layout="@layout/house_up_custom_headerbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:layout_marginBottom="60dp"
+            app:layout_constraintBottom_toTopOf="@id/btnP1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customToolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/customToolbar">
+
+                <TextView
+                    android:id="@+id/PLText1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hey Adnan Qureshi! \nTell us about your property"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_26ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/P1LinearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/PLText1">
+
+                    <TextView
+                        android:id="@+id/P1Text1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_weight="0.6"
+                        android:text="Property type"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/darkGreyColor"
+                        android:textSize="@dimen/_14ssp" />
+
+                    <TextView
+                        android:id="@+id/P1Text2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_weight="0.6"
+                        android:text="Rental listing"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/darkGreyColor"
+                        android:textSize="@dimen/_14ssp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/P1LinearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/P1LinearLayout1">
+
+                    <Spinner
+                        android:id="@+id/P1Spinner1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_weight="0.6"
+                        android:background="@drawable/item_spinner"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/darkGreyColor"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <Spinner
+                        android:id="@+id/P1Spinner2"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.6"
+                        android:background="@drawable/item_spinner"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/darkGreyColor"
+                        android:textSize="@dimen/_12ssp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/PLText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:text="Property Location"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/darkGreyColor"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/P1LinearLayout2" />
+
+                <EditText
+                    android:id="@+id/PLEditText1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_text_boarder"
+                    android:drawableStart="@drawable/ic_search"
+                    android:drawableEnd="@drawable/ic_current_loc"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:hint="Enter Address"
+                    android:inputType="textEmailAddress"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:textColor="@color/phone_verify_grey"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/PLText2" />
+
+                <TextView
+                    android:id="@+id/PLText3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="Ad title"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/darkGreyColor"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/PLEditText1" />
+
+                <EditText
+                    android:id="@+id/PLEditText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_text_boarder"
+                    android:inputType="text"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/PLText3" />
+
+                <LinearLayout
+                    android:id="@+id/PLLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/PLEditText2">
+
+                    <TextView
+                        android:id="@+id/PLText4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_weight="0.6"
+                        android:text="Currency"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/darkGreyColor"
+                        android:textSize="@dimen/_14ssp" />
+
+                    <TextView
+                        android:id="@+id/PLText5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:text="* Price"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/darkGreyColor"
+                        android:textSize="@dimen/_14ssp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/PLLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/PLLayout1">
+
+                    <Spinner
+                        android:id="@+id/PLSpinner"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_weight="0.6"
+                        android:background="@drawable/item_spinner"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/darkGreyColor"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <EditText
+                        android:id="@+id/PLEditText4"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_boarder"
+                        android:drawableStart="@drawable/ic_money_24"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:inputType="text"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/darkGreyColor"
+                        android:textSize="@dimen/_12ssp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/PLText6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="Description"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/darkGreyColor"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/PLLayout2" />
+
+                <EditText
+                    android:id="@+id/PLEditText5"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_text_boarder"
+                    android:gravity="top"
+                    android:hint="More details about your property..."
+                    android:inputType="text"
+                    android:maxLines="2"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/phone_verify_grey"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/PLText6" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_cheese"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="I am posting this property ' exclusively on House Up"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/PLEditText5" />
+
+                <TextView
+                    android:id="@+id/PLText7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="YOU NEED VENDOR SERVICES?"
+                    android:textAlignment="center"
+                    android:textColor="@color/dot_light_screen4"
+                    android:textSize="@dimen/_14ssp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/checkbox_cheese" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnP1"
+        style="@style/ButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:onClick="onLoginClick"
+        android:fontFamily="@font/gilroy_medium"
+        android:stateListAnimator="@null"
+        android:text="Continue To Post"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_14ssp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--</layout>-->

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00B0E9</color>
+    <color name="colorPrimaryDark">#007AFF</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="headingColor">#1E1B1B</color>
+    <color name="skyColor_bg">#E2F5FF</color>
+    <color name="button_bg_pressed">#B015C5FD</color>
+    <color name="colorWaterBlue">#00B0E9</color>
+    <color name="gray_light">#929292</color>
+    <color name="view_color">#EFEFF4</color>
+
+
+
+    <color name="line_view_color">#D1D1D6</color>
+    <color name="colorBlack">#000000</color>
+    <color name="darkGreyColor">#4D4D4D</color>
+    <color name="phone_verify_grey">#8E8E93</color>
+    <color name="dot_light_screen4">#007AFF</color>
+    <color name="imageBackground">#F3F3F3</color>
+    <color name="red">#FF3B30</color>
+    <color name="colorBackLayoutBg">#F8F8F8EB</color>
+</resources>

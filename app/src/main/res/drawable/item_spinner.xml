@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="transparent">
+    <item android:drawable="@drawable/round_grey_bg" android:state_focused="false" />
+    <item android:drawable="@drawable/round_blue_bg" android:state_focused="true" />
+    <item android:width="@dimen/_100sdp" android:right="@dimen/_8sdp"
+        android:gravity="right"
+        android:start="@dimen/_200sdp">
+        <bitmap android:src="@drawable/ic_options" android:gravity="end"/>
+    </item>
+</layer-list>

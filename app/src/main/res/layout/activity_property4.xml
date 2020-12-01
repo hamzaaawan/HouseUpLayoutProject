@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<layout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto">-->
+<!--    <data>-->
+
+<!--        <import type="android.view.View" />-->
+
+<!--        <variable-->
+<!--            name="viewmodel"-->
+<!--            type="com.kiamermedia.houseup.ui.property4.Property4ViewModel" />-->
+
+<!--    </data>-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/customToolbar"
+            layout="@layout/house_up_custom_headerbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="60dp"
+            android:layout_marginTop="?attr/actionBarSize"
+            app:layout_constraintBottom_toTopOf="@+id/btnP4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customToolbar"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/customToolbar">
+
+
+                <TextView
+                    android:id="@+id/P4Text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:text="Primary heating fuel"
+                    android:textColor="@color/darkGreyColor"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Spinner
+                    android:id="@+id/P4Spinner1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/item_spinner"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/darkGreyColor"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/P4Text1" />
+
+                <TextView
+                    android:id="@+id/P4Text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Year furnace installed"
+                    android:textColor="@color/darkGreyColor"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/P4Spinner1" />
+
+                <EditText
+                    android:id="@+id/P4EditText1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/edit_text_boarder"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/darkGreyColor"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/P4Text2" />
+
+                <TextView
+                    android:id="@+id/P4Text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Year roof installed"
+                    android:textColor="@color/darkGreyColor"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/P4EditText1" />
+
+                <EditText
+                    android:id="@+id/P4EditText2"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/edit_text_boarder"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/darkGreyColor"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/P4Text3" />
+
+                <TextView
+                    android:id="@+id/P4Text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Storeys"
+                    android:textColor="@color/darkGreyColor"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/P4EditText2" />
+
+                <EditText
+                    android:id="@+id/P4EditText3"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/edit_text_boarder"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/darkGreyColor"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/P4Text4" />
+
+                <TextView
+                    android:id="@+id/P4Text5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:text="Water source"
+                    android:textColor="@color/darkGreyColor"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/P4EditText3" />
+
+                <Spinner
+                    android:id="@+id/P4Spinner2"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/item_spinner"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/darkGreyColor"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/P4Text5" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+        <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnP4"
+        style="@style/ButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:onClick="onLoginClick"
+        android:fontFamily="@font/gilroy_medium"
+        android:stateListAnimator="@null"
+        android:text="Continue To Post"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_14ssp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--</layout>-->
